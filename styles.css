@@ -140,11 +140,9 @@ a {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 40%,
-    rgba(0, 0, 0, 0.45) 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0.45) 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -198,8 +196,17 @@ a {
 }
 
 @keyframes scrollPulse {
-  0%, 100% { opacity: 0.3; transform: translateX(-50%) scaleY(0.6); }
-  50% { opacity: 0.8; transform: translateX(-50%) scaleY(1); }
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translateX(-50%) scaleY(0.6);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: translateX(-50%) scaleY(1);
+  }
 }
 
 /* ── Invitation Section ── */
@@ -843,7 +850,9 @@ a {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ── Curtain / Intro Overlay ── */
@@ -859,6 +868,26 @@ a {
   transition: opacity 0.6s ease;
 }
 
+/* .curtain-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: fadeOut 0.6s ease 2s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+} */
+
 .curtain-overlay.fade-out {
   opacity: 0;
   pointer-events: none;
@@ -872,7 +901,9 @@ a {
 }
 
 @keyframes curtainFadeIn {
-  to { opacity: 1; }
+  to {
+    opacity: 1;
+  }
 }
 
 .curtain-names {

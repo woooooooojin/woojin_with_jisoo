@@ -29,32 +29,32 @@
   // ── Image Loading ──
   function loadImagesFromFolder(folder, maxAttempts = 50) {
     return new Promise(resolve => {
-        const images = [];
-        let current = 1;
-        let consecutiveFails = 0;
+      const images = [];
+      let current = 1;
+      let consecutiveFails = 0;
 
-        function tryNext() {
-            if (current > maxAttempts || consecutiveFails >= 3) {
-                resolve(images);
-                return;
-            }
-            const img = new Image();
-            const path = `images/${folder}/${current}.jpg`;
-            img.onload = function() {
-                images.push(path);
-                consecutiveFails = 0;
-                current++;
-                tryNext();
-            };
-            img.onerror = function() {
-                consecutiveFails++;
-                current++;
-                tryNext();
-            };
-            img.src = path;
+      function tryNext() {
+        if (current > maxAttempts || consecutiveFails >= 3) {
+          resolve(images);
+          return;
         }
+        const img = new Image();
+        const path = `images/${folder}/${current}.jpg`;
+        img.onload = function () {
+          images.push(path);
+          consecutiveFails = 0;
+          current++;
+          tryNext();
+        };
+        img.onerror = function () {
+          consecutiveFails++;
+          current++;
+          tryNext();
+        };
+        img.src = path;
+      }
 
-        tryNext();
+      tryNext();
     });
   }
 
@@ -117,15 +117,25 @@
 
     // 열기 버튼
     const btn = $('#curtain-open-btn');
-    if (btn) {
-      btn.addEventListener('click', () => {
-        overlay.classList.add('fade-out');
-        document.body.style.overflow = '';
-        overlay.addEventListener('transitionend', () => {
-          overlay.remove();
-        }, { once: true });
-      });
-    }
+    //2초뒤 닫기
+    setTimeout(() => {
+      overlay.classList.add('fade-out');
+      document.body.style.overflow = '';
+
+      overlay.addEventListener('transitionend', () => {
+        overlay.remove();
+      }, { once: true });
+    }, 2000);
+
+    // if (btn) {
+    //   btn.addEventListener('click', () => {
+    //     overlay.classList.add('fade-out');
+    //     document.body.style.overflow = '';
+    //     overlay.addEventListener('transitionend', () => {
+    //       overlay.remove();
+    //     }, { once: true });
+    //   });
+    // }
   }
 
   // ── Build Page ──
@@ -207,6 +217,8 @@
       heroVenue.textContent = c.wedding.venue;
     }
   }
+
+
 
   // ── Invitation ──
   function buildInvitation(c, dateInfo, timeText) {

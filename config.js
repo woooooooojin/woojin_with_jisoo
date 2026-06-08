@@ -16,50 +16,52 @@
 
 const CONFIG = {
   // ── 초대장 열기 ──
-  useCurtain: true,  // 초대장 열기 화면 사용 여부 (true: 사용, false: 바로 본문 표시)
+  useCurtain: true, // 초대장 열기 화면 사용 여부 (true: 사용, false: 바로 본문 표시)
 
   // ── 메인 (히어로) ──
   groom: {
     name: "신랑",
-    nameEn: "GROOM",
+    nameEn: "WOOJIN",
     father: "아버지",
     mother: "어머니",
     fatherDeceased: false,
-    motherDeceased: false
+    motherDeceased: false,
   },
 
   bride: {
     name: "신부",
-    nameEn: "BRIDE",
+    nameEn: "JISOO",
     father: "아버지",
     mother: "어머니",
     fatherDeceased: false,
-    motherDeceased: false
+    motherDeceased: false,
   },
 
   wedding: {
-    date: "2025-01-01",
-    time: "13:00",
-    venue: "예식장 이름",
+    date: "2026-12-27",
+    time: "11:00",
+    venue: "K-Wedding Hall",
     hall: "3층 그랜드홀",
-    address: "서울특별시 강남구 테헤란로 123",
-    tel: "02-1234-5678",
+    address: "부산광역시 연제구 중앙대로 1217 국제빌딩 4층",
+    tel: "051-555-9779",
     mapLinks: {
       kakao: "",
-      naver: ""
-    }
+      naver: "",
+    },
   },
 
   // ── 인사말 ──
   invitation: {
     title: "소중한 분들을 초대합니다",
-    message: "서로 다른 길을 걸어온 두 사람이\n이제 같은 길을 함께 걸어가려 합니다.\n\n바쁘시더라도 오셔서\n축복해 주시면 감사하겠습니다."
+    message:
+      "서로 다른 길을 걸어온 두 사람이\n이제 같은 길을 함께 걸어가려 합니다.\n\n바쁘시더라도 오셔서\n축복해 주시면 감사하겠습니다.",
   },
 
   // ── 우리의 이야기 ──
   story: {
     title: "우리의 이야기",
-    content: "서로 다른 길을 걷던 두 사람이\n하나의 길을 함께 걷게 되었습니다.\n\n여러분을 소중한 자리에 초대합니다."
+    content:
+      "서로 다른 길을 걷던 두 사람이\n하나의 길을 함께 걷게 되었습니다.\n\n여러분을 소중한 자리에 초대합니다.",
   },
 
   // ── 오시는 길 ──
@@ -68,21 +70,51 @@ const CONFIG = {
   // ── 마음 전하실 곳 ──
   accounts: {
     groom: [
-      { role: "신랑", name: "홍길동", bank: "OO은행", number: "000-000-000000" },
-      { role: "아버지", name: "홍판서", bank: "OO은행", number: "000-000-000000" },
-      { role: "어머니", name: "김순이", bank: "OO은행", number: "000-000-000000" }
+      {
+        role: "신랑",
+        name: "홍길동",
+        bank: "OO은행",
+        number: "000-000-000000",
+      },
+      {
+        role: "아버지",
+        name: "홍판서",
+        bank: "OO은행",
+        number: "000-000-000000",
+      },
+      {
+        role: "어머니",
+        name: "김순이",
+        bank: "OO은행",
+        number: "000-000-000000",
+      },
     ],
     bride: [
-      { role: "신부", name: "김영희", bank: "OO은행", number: "000-000-000000" },
-      { role: "아버지", name: "김철수", bank: "OO은행", number: "000-000-000000" },
-      { role: "어머니", name: "이미자", bank: "OO은행", number: "000-000-000000" }
-    ]
+      {
+        role: "신부",
+        name: "김영희",
+        bank: "OO은행",
+        number: "000-000-000000",
+      },
+      {
+        role: "아버지",
+        name: "김철수",
+        bank: "OO은행",
+        number: "000-000-000000",
+      },
+      {
+        role: "어머니",
+        name: "이미자",
+        bank: "OO은행",
+        number: "000-000-000000",
+      },
+    ],
   },
 
   // ── 링크 공유 시 나타나는 문구 ──
   kakaoShare: {
     jsKey: "",
     title: "결혼식에 초대합니다",
-    description: ""
-  }
+    description: "",
+  },
 };

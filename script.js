@@ -616,7 +616,71 @@
       });
     }
   }
+  //배경음악
+  // const audio = document.getElementById("bgm");
+  // const button = document.getElementById("musicToggle");
 
+  // // 모바일 브라우저 자동재생 대응
+
+  // let isMuted = false;
+
+  // button.addEventListener("click", () => {
+  //   if (isMuted) {
+  //     audio.muted = false;
+  //     button.textContent = "🔊";
+  //   } else {
+  //     audio.muted = true;
+  //     button.textContent = "🔇";
+  //   }
+
+  //   isMuted = !isMuted;
+  // });
+
+  // // 사용자가 첫 터치 시 재생 시도 (iOS 대응)
+  // document.body.addEventListener(
+  //   "click",
+  //   () => {
+  //     audio.play().catch(() => {});
+  //   },
+  //   { once: true },
+  // );
+
+  const audio = document.getElementById("bgm");
+  const btn = document.getElementById("musicToggle");
+  const soundOn = document.getElementById("soundOn");
+  const soundOff = document.getElementById("soundOff");
+
+  btn.addEventListener("click", async () => {
+    if (audio.paused) {
+      try {
+        await audio.play();
+        audio.muted = false;
+
+        soundOn.style.display = "block";
+        soundOff.style.display = "none";
+      } catch (err) {
+        console.error("재생 실패:", err);
+      }
+    } else {
+      audio.pause();
+
+      soundOn.style.display = "none";
+      soundOff.style.display = "block";
+    }
+  });
+
+  //사용자가 스크롤하거나 터치하면 노래재생
+
+  // function startMusic() {
+  //   audio.play().catch(() => {});
+  //   document.removeEventListener("touchstart", startMusic);
+  //   document.removeEventListener("click", startMusic);
+  // }
+
+  // document.addEventListener("touchstart", startMusic, { once: true });
+  // document.addEventListener("click", startMusic, { once: true });
+
+  //배경끝
   // ── Scroll Animations ──
   let scrollObserver = null;
 

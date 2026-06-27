@@ -203,7 +203,7 @@
   function buildHero(c, dateInfo, timeText) {
     const heroImg = $(".hero-image");
     if (heroImg) {
-      heroImg.src = "images/hero/1.jpg";
+      heroImg.src = "images/hero/main_01.jpeg";
       heroImg.alt = `${c.groom.name} & ${c.bride.name}`;
     }
 
@@ -549,7 +549,7 @@
       tel.innerHTML = `<a href="tel:${c.wedding.tel}">${c.wedding.tel}</a>`;
     }
     if (mapImg) {
-      mapImg.src = "images/location/1.jpg";
+      mapImg.src = "images/location/location_01.png";
       mapImg.alt = `${c.wedding.venue} 약도`;
     }
 
@@ -663,7 +663,6 @@
       }
     } else {
       audio.pause();
-
       soundOn.style.display = "none";
       soundOff.style.display = "block";
     }

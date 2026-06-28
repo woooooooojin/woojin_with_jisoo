@@ -114,7 +114,7 @@ li {
 .section-divider {
   width: 32px;
   height: 1px;
-  background: #ccc;
+  background: #e8e8e8;
   margin: 0 auto 32px;
 }
 
@@ -271,7 +271,8 @@ li {
 /* ── Countdown Section ── */
 .countdown {
   text-align: center;
-  background: #fafafa;
+  background: #fff;
+  border-top: 1px solid #f8f8f8;
 }
 
 .countdown-grid {
@@ -279,6 +280,13 @@ li {
   justify-content: center;
   gap: 24px;
   margin-bottom: 20px;
+}
+.calendar_img_wrap {
+  width: 100%;
+  height: auto;
+  margin-bottom: 32px;
+}
+.calendar_img_wrap > img {
 }
 
 .countdown-item {
@@ -291,7 +299,7 @@ li {
 .countdown-number {
   font-size: 36px;
   font-weight: 200;
-  color: #000;
+  color: #5a4a4a;
   letter-spacing: -0.02em;
   line-height: 1;
   font-variant-numeric: tabular-nums;
@@ -405,7 +413,8 @@ li {
 
 /* ── Gallery Section ── */
 .gallery {
-  background: #fafafa;
+  background: #fff;
+  border-top: 1px solid #f8f8f8;
 }
 
 .gallery-header {
@@ -449,10 +458,10 @@ li {
 
 .btn-gallery-more {
   padding: 10px 28px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 1px solid #eee;
+  border-radius: 8px;
   font-size: 13px;
-  color: #666;
+  color: #555;
   font-weight: 400;
   transition: all 0.2s;
   background: #fff;
@@ -571,7 +580,8 @@ li {
 
 /* ── Location Section ── */
 .location {
-  background: #fff;
+  background: #fefefe;
+  border-top: 1px solid #f8f8f8;
 }
 
 .location-header {
@@ -614,7 +624,7 @@ li {
 
 .location-map-image {
   width: 100%;
-  border-radius: 4px;
+  border-radius: 8px;
   overflow: hidden;
   margin-bottom: 20px;
   border: 1px solid #eee;
@@ -640,20 +650,26 @@ li {
   justify-content: center;
   gap: 6px;
   padding: 12px 0;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 1px solid #eee;
+  border-radius: 8px;
   font-size: 13px;
   color: #555;
   font-weight: 400;
-  transition: all 0.2s;
+  transition: all 0.3s;
   background: #fff;
   text-align: center;
 }
 
 .location-actions button:hover,
 .location-actions a:hover {
-  border-color: #999;
-  color: #000;
+  border-color: #444;
+  color: #111;
+  font-weight: bold;
+}
+
+.location-actions button:hover,
+.location-actions a:hover {
+  transform: scale(0.97);
 }
 
 .location-actions svg {
@@ -662,19 +678,32 @@ li {
   flex-shrink: 0;
 }
 .line {
-  width: 32px;
+  width: 24px;
   margin: 0 auto;
-  height: 0.5px;
-  border-top: 1px solid #eee;
-  margin-top: 40px;
+  height: 1px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  background-color: #e8e8e8;
 }
 .location_parking {
-  margin-top: 32px;
+  background-color: #fff;
 }
 .location_parking_tit {
   text-align: center;
   font-size: 18px;
   font-weight: bold;
+}
+.parking_sub_tit {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.parking_sub_tit > img {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
 }
 .location_parking_content {
   font-size: 14px;
@@ -682,13 +711,19 @@ li {
 .parking_list {
   width: 100%;
   margin-top: 4px;
-  text-align: center;
 }
-
+.parking_02 {
+  margin-top: 32px;
+}
+.margin-50 {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
 /* ── Account Section ── */
 .account {
-  background: #fafafa;
+  background: #fefefe;
   text-align: center;
+  border-top: 1px solid #f8f8f8;
 }
 
 .account-header {
@@ -773,21 +808,54 @@ li {
   margin-right: 8px;
 }
 
-.btn-copy-account {
+/* .btn-copy-account {
   padding: 8px 16px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
   font-size: 12px;
-  color: #666;
+  color: #555;
   font-weight: 400;
   transition: all 0.2s;
-  background: #fafafa;
+  background: #fefefe;
   white-space: nowrap;
 }
 
 .btn-copy-account:hover {
   border-color: #999;
-  color: #000;
+  color: 000;
+} */
+
+.btn-copy-account {
+  padding: 8px 16px;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.2px;
+
+  color: #555;
+  background: #fefefe;
+
+  box-shadow: 0 2px 8px rgba(170, 140, 110, 0.08);
+
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-copy-account:hover {
+  border-color: #444;
+  color: #444;
+  font-weight: bold;
+
+  box-shadow: 0 5px 14px rgba(170, 140, 110, 0.15);
+  transform: translateY(-1px);
+}
+
+.btn-copy-account:active {
+  transform: scale(0.97);
 }
 
 /* ── Footer ── */

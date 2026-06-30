@@ -74,7 +74,7 @@ const CONFIG = {
         role: "신랑",
         name: "최우진",
         bank: "우리",
-        number: "1002-564-42590",
+        number: "1002-564-425590",
       },
       {
         role: "아버지",

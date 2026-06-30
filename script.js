@@ -722,7 +722,7 @@
 
         this.size = 8 + Math.random() * 12;
 
-        this.speedY = 0.5 + Math.random() * 1.2;
+        this.speedY = 0.5 + Math.random() * 0.1;
         this.speedX = (Math.random() - 0.5) * 0.4;
 
         this.rotation = Math.random() * Math.PI * 2;

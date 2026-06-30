@@ -42,10 +42,10 @@ const CONFIG = {
     time: "15:00",
     venue: "국제빌딩 4층 K-Wedding Hall",
     hall: "",
-    address: "부산광역시 연제구 중앙대로 1217 국제빌딩 4층",
+    address: "부산광역시 연제구 중앙대로 1217",
     tel: "051-555-9779",
     mapLinks: {
-      kakao: "https://kko.to/Zh64mWiq3b",
+      kakao: "https://kko.to/YeiGXjfYZK",
       naver: "https://naver.me/x67yKU1M",
     },
   },

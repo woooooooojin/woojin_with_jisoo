@@ -41,7 +41,7 @@ const CONFIG = {
     date: "2026-10-24",
     time: "15:00",
     venue: "K-Wedding Hall",
-    hall: "3층 그랜드홀",
+    hall: "",
     address: "부산광역시 연제구 중앙대로 1217 국제빌딩 4층",
     tel: "051-555-9779",
     mapLinks: {

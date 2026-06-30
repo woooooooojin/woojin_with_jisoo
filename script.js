@@ -680,6 +680,116 @@
   // document.addEventListener("click", startMusic, { once: true });
 
   //배경끝
+
+  //떨어지는 하트 컴페티
+  function initFallingHearts() {
+    const canvas = document.getElementById("heartCanvas");
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d");
+
+    let width = 0;
+    let height = 0;
+
+    const HEART_COUNT = 20;
+    const hearts = [];
+
+    const COLORS = [
+      "#FFB5C2",
+      "#B5D8FF",
+      "#FFF5BA",
+      "#B5F0D6",
+      "#D5B5FF",
+      "#FFD6DF",
+    ];
+
+    function resize() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+
+    resize();
+    window.addEventListener("resize", resize);
+
+    class Heart {
+      constructor() {
+        this.reset(true);
+      }
+
+      reset(initial = false) {
+        this.x = Math.random() * width;
+        this.y = initial ? Math.random() * -height : -30;
+
+        this.size = 8 + Math.random() * 12;
+
+        this.speedY = 0.5 + Math.random() * 1.2;
+        this.speedX = (Math.random() - 0.5) * 0.4;
+
+        this.rotation = Math.random() * Math.PI * 2;
+        this.rotationSpeed = (Math.random() - 0.5) * 0.03;
+
+        this.wave = Math.random() * Math.PI * 2;
+        this.opacity = 0.2 + Math.random() * 0.4;
+
+        this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+      }
+
+      update() {
+        this.wave += 0.02;
+
+        this.y += this.speedY;
+        this.x += this.speedX + Math.sin(this.wave) * 0.3;
+
+        this.rotation += this.rotationSpeed;
+
+        if (this.y > height + 40) {
+          this.reset();
+        }
+      }
+
+      draw() {
+        ctx.save();
+
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.rotation);
+
+        ctx.globalAlpha = this.opacity;
+        ctx.fillStyle = this.color;
+
+        const s = this.size;
+
+        ctx.beginPath();
+        ctx.moveTo(0, s * 0.3);
+
+        ctx.bezierCurveTo(-s * 0.5, -s * 0.3, -s, s * 0.2, 0, s);
+
+        ctx.bezierCurveTo(s, s * 0.2, s * 0.5, -s * 0.3, 0, s * 0.3);
+
+        ctx.fill();
+
+        ctx.restore();
+      }
+    }
+
+    for (let i = 0; i < HEART_COUNT; i++) {
+      hearts.push(new Heart());
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+
+      hearts.forEach((heart) => {
+        heart.update();
+        heart.draw();
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  }
+
+  window.addEventListener("DOMContentLoaded", initFallingHearts);
   // ── Scroll Animations ──
   let scrollObserver = null;
 

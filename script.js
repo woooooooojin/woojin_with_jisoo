@@ -695,12 +695,12 @@
     const hearts = [];
 
     const COLORS = [
-      "#FFB5C2",
-      "#B5D8FF",
-      "#FFF5BA",
-      "#B5F0D6",
-      "#D5B5FF",
-      "#FFD6DF",
+      "#D8D4CF",
+      "#CEC9C3",
+      "#C6C1BA",
+      "#BEB8B0",
+      "#B4AEA7",
+      "#AAA49C",
     ];
 
     function resize() {

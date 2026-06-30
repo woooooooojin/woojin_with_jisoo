@@ -580,7 +580,7 @@ li {
 
 /* ── Location Section ── */
 .location {
-  background: #fefefe;
+  background: #fff;
   border-top: 1px solid #f8f8f8;
 }
 
@@ -721,7 +721,7 @@ li {
 }
 /* ── Account Section ── */
 .account {
-  background: #fefefe;
+  background: #fff;
   text-align: center;
   border-top: 1px solid #f8f8f8;
 }

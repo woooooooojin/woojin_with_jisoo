@@ -698,9 +698,9 @@
       "#D8D4CF",
       "#CEC9C3",
       "#C6C1BA",
-      "#BEB8B0",
-      "#B4AEA7",
-      "#AAA49C",
+      "#f2f2f2",
+      "#F5F5F5",
+      "#F5F2F2",
     ];
 
     function resize() {

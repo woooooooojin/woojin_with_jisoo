@@ -1027,7 +1027,7 @@ li {
 
 .curtain-content {
   text-align: center;
-  color: #fff6f6;
+  color: #f2f2f2;
   animation: curtainFadeIn 0.8s ease forwards;
   opacity: 0;
 }

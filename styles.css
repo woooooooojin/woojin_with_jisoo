@@ -807,6 +807,9 @@ li {
   font-weight: 500;
   margin-right: 8px;
 }
+.section_desc {
+  margin-bottom: 48px;
+}
 
 /* .btn-copy-account {
   padding: 8px 16px;

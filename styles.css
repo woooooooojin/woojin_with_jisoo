@@ -503,7 +503,7 @@ li {
   justify-content: center;
   color: #fff;
   font-size: 24px;
-  z-index: 10;
+  z-index: 99999;
   opacity: 0.7;
   transition: opacity 0.2s;
 }
@@ -1106,7 +1106,7 @@ li {
 /*배경음악*/
 .music-btn {
   position: fixed;
-  top: 16px;
+  bottom: 16px;
   right: 16px;
   width: 40px;
   height: 40px;
@@ -1125,7 +1125,7 @@ li {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   /* border-radius: 10px; */
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  /* border: 1px solid rgba(255, 255, 255, 0.18); */
   box-shadow: 0px 8px 32px rgba(31, 38, 135, 0.37);
 }
 

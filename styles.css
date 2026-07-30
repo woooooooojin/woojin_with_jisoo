@@ -80,11 +80,17 @@ li {
     max-width: 520px;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.06);
   }
+  .hero-text {
+    font-size: 50px;
+  }
 }
 
 @media (min-width: 1024px) {
   .wrapper {
     max-width: 560px;
+  }
+  .hero-text {
+    font-size: 60px;
   }
 }
 
@@ -141,6 +147,19 @@ li {
   max-height: 900px;
   overflow: hidden;
 }
+.hero-text {
+  font-family: "Great Vibes", cursive;
+  font-weight: 500;
+  font-style: normal;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%);
+  color: #fefefe;
+  font-size: 46px;
+}
 
 .hero-image {
   width: 100%;
@@ -167,7 +186,7 @@ li {
 }
 
 .hero-names {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 400;
   /* letter-spacing: 0.08em; */
   margin-bottom: 18px;
@@ -985,7 +1004,7 @@ li {
 
   /**/
 
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   box-shadow: 0px 8px 32px rgba(31, 38, 135, 0.37);

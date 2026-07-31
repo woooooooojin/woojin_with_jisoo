@@ -1135,7 +1135,7 @@ li {
 /*배경음악*/
 .music-btn {
   position: fixed;
-  bottom: 16px;
+  bottom: 24px;
   right: 16px;
   width: 40px;
   height: 40px;
@@ -1163,7 +1163,7 @@ li {
 /*위치 섹션 이동 버튼*/
 .location-btn {
   position: fixed;
-  bottom: 64px;
+  bottom: 76px;
   right: 16px;
   width: 40px;
   height: 40px;

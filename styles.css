@@ -145,7 +145,7 @@ li {
   height: 100svh;
   min-height: 600px;
   max-height: 900px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .hero-text {
   font-family: "Great Vibes", cursive;
@@ -158,7 +158,7 @@ li {
   left: 50%;
   transform: translate(-50%);
   color: #fefefe;
-  font-size: 46px;
+  font-size: 50px;
 }
 .hero-text text {
   font-size: 58px;
@@ -188,7 +188,7 @@ li {
 }
 
 .hero-names {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 400;
   /* letter-spacing: 0.08em; */
   margin-bottom: 18px;

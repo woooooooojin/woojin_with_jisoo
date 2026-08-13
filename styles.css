@@ -154,7 +154,7 @@ li {
   position: absolute;
   width: 100%;
   text-align: center;
-  top: 50px;
+  top: 0px;
   left: 50%;
   transform: translate(-50%);
   color: #fefefe;

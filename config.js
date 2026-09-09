@@ -1,17 +1,11 @@
 /**
- * Modern Minimal Wedding Invitation Configuration
- *
- * Edit the values below to customize your wedding invitation.
- * Image files should be placed in the corresponding images/ subfolders
- * using sequential filenames (1.jpg, 2.jpg, ...).
- * The code auto-detects images by trying sequential filenames.
- *
- * Image folder conventions:
- *   images/hero/1.jpg       - Main wedding photo (single file)
- *   images/story/1.jpg, ... - Story section photos (auto-detected)
- *   images/gallery/1.jpg, . - Gallery photos (auto-detected)
- *   images/location/1.jpg   - Venue/map image (single file)
- *   images/og/1.jpg         - Kakao share thumbnail (single file)
+
+ * 이미지 폴더 컨벤션 :
+ *   images/hero/1.jpg       - Main wedding photo (싱글파일)
+ *   images/story/1.jpg, ... - Story section photos (여러파일 자동감지)
+ *   images/gallery/1.jpg, . - Gallery photos (여러파일 자동감지)
+ *   images/location/1.jpg   - Venue/map image (싱글 파일)
+ *   images/og/1.jpg         - Kakao share thumbnail (싱글 파일)
  */
 
 const CONFIG = {

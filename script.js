@@ -39,7 +39,7 @@
           return;
         }
         const img = new Image();
-        const path = `images/${folder}/${current}.jpg`;
+        const path = `images/${folder}/${current}.webp`;
         img.onload = function () {
           images.push(path);
           consecutiveFails = 0;

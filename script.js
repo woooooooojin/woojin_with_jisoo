@@ -203,7 +203,7 @@
   function buildHero(c, dateInfo, timeText) {
     const heroImg = $(".hero-image");
     if (heroImg) {
-      heroImg.src = "images/hero/main_01.jpeg";
+      heroImg.src = "images/hero/IMG_0459.webp";
       heroImg.alt = `${c.groom.name} & ${c.bride.name}`;
     }
 

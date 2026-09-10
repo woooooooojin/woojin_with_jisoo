@@ -154,7 +154,7 @@ li {
   position: absolute;
   width: 100%;
   text-align: center;
-  top: 24px;
+  top: 20px;
   left: 50%;
   transform: translate(-50%);
   color: #fefefe;
@@ -168,6 +168,20 @@ li {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.hero-t-1 span,
+.hero-t-2 span,
+.hero-t-3 span {
+  font-size: 60px;
+}
+.hero-text.hero-t-1 {
+}
+.hero-text.hero-t-2 {
+  margin-top: 65px;
+}
+.hero-text.hero-t-3 {
+  margin-top: 117px;
 }
 
 .hero-overlay {
@@ -1093,13 +1107,18 @@ li {
   border-color: #fff;
   background: rgba(255, 255, 255, 0.1);
 }
-
-.curtain-text {
-  font-size: 80px;
+.curtain-text1 {
+  font-size: 16px;
+  text-align: center;
   line-height: 1.2;
-  font-family: "Great Vibes", cursive;
-  font-weight: 400;
-  font-style: normal;
+  margin-bottom: 12px;
+  /* color: #ffe1e0; */
+}
+
+.curtain-text2 {
+  font-size: 24px;
+  text-align: center;
+  line-height: 1.2;
   /* color: #ffe1e0; */
 }
 .our {

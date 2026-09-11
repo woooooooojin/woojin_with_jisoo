@@ -617,16 +617,6 @@
     }
   }
 
-  //
-
-  var container = document.getElementById("map");
-
-  var options = {
-    center: new kakao.maps.LatLng(35.196, 129.0794),
-    level: 3,
-  };
-
-  var map = new kakao.maps.Map(container, options);
   //배경음악
   // const audio = document.getElementById("bgm");
   // const button = document.getElementById("musicToggle");

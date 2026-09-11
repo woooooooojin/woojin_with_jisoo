@@ -287,6 +287,17 @@
         <div class="location-map-image">
           <img src="" alt="약도" loading="lazy" />
         </div>
+        <!-- 카카오맵 시작-->
+        <div
+          id="map"
+          style="
+            width: 100%;
+            height: 400px;
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+          "
+        ></div>
+        <!--카카오맵 끝-->
         <div class="location-actions">
           <button type="button" id="btn-copy-address">
             <svg
@@ -479,5 +490,11 @@
     <!-- Scripts -->
     <script src="config.js"></script>
     <script src="script.js"></script>
+    <!--카카오 맵 sdk-->
+    <script
+      type="text/javascript"
+      src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=019f3214fbd7301b7ac54e534d3999c6"
+    ></script>
+    <script src="kakaomap.js"></script>
   </body>
 </html>

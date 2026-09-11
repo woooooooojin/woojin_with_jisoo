@@ -427,6 +427,8 @@
       } else {
         let expanded = false;
         moreBtn.addEventListener("click", () => {
+          //내폰에서 로딩시 가끔 새로고침 생김
+          e.preventDefault();
           if (!expanded) {
             renderImages(images.length);
             moreBtn.textContent = "접기";

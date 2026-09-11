@@ -1246,3 +1246,8 @@ li {
     transform: scale(1);
   }
 }
+
+.last_img > img {
+  border-radius: 8px;
+  margin-top: 60px;
+}

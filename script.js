@@ -391,13 +391,23 @@
 
     galleryAllImages = images;
 
+    // if (images.length === 0) {
+    //   // Hide entire gallery section if no images found
+    //   const gallerySection = grid.closest(".gallery");
+    //   if (gallerySection) gallerySection.style.display = "none";
+    //   return;
+    // }
+    ////////////////////////////////////////////////////
     if (images.length === 0) {
-      // Hide entire gallery section if no images found
       const gallerySection = grid.closest(".gallery");
-      if (gallerySection) gallerySection.style.display = "none";
+
+      if (gallerySection) {
+        gallerySection.style.display = "none";
+      }
+
       return;
     }
-
+    ////////////////////////////////////////////////////////
     const initialCount = 6;
 
     function renderImages(count) {
@@ -427,8 +437,6 @@
       } else {
         let expanded = false;
         moreBtn.addEventListener("click", () => {
-          //내폰에서 로딩시 가끔 새로고침 생김
-          e.preventDefault();
           if (!expanded) {
             renderImages(images.length);
             moreBtn.textContent = "접기";

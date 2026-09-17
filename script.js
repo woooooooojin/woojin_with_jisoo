@@ -452,6 +452,13 @@
     }
   }
 
+  //
+  document.addEventListener("contextmenu", function (e) {
+    if (e.target.closest("img")) {
+      e.preventDefault();
+    }
+  });
+
   // ── Photo Modal ──
   let currentModalImages = [];
   let currentModalIndex = 0;

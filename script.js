@@ -596,13 +596,30 @@
   //   }
   // }
   //우클릭방지버전
+  // function updateModalImage() {
+  //   const image = $(".modal-image");
+  //   const counter = $(".modal-counter");
+
+  //   if (image) {
+  //     image.style.backgroundImage = `url("${currentModalImages[currentModalIndex]}")`;
+  //     image.setAttribute("aria-label", `Photo ${currentModalIndex + 1}`);
+  //   }
+
+  //   if (counter) {
+  //     counter.textContent = `${currentModalIndex + 1} / ${currentModalImages.length}`;
+  //   }
+  // }
   function updateModalImage() {
     const image = $(".modal-image");
     const counter = $(".modal-counter");
 
     if (image) {
-      image.style.backgroundImage = `url("${currentModalImages[currentModalIndex]}")`;
-      image.setAttribute("aria-label", `Photo ${currentModalIndex + 1}`);
+      const src = currentModalImages[currentModalIndex];
+
+      image.style.backgroundImage = `url("${src}")`;
+      image.style.backgroundSize = "contain";
+      image.style.backgroundPosition = "center";
+      image.style.backgroundRepeat = "no-repeat";
     }
 
     if (counter) {

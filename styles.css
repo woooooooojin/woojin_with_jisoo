@@ -595,7 +595,6 @@ li {
   -webkit-user-select: none;
   user-select: none;
   -webkit-user-drag: none;
-  transition: transform 0.3s ease;
 }
 
 .modal-nav {

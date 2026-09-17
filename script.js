@@ -382,7 +382,7 @@
   //     .join("");
   // }
 
-  ///수정후
+  ///이미지 우클릭 수정후
   function buildStoryImages(storyImages) {
     const container = $(".story-images");
     if (!container) return;
@@ -434,14 +434,34 @@
     ////////////////////////////////////////////////////////
     const initialCount = 6;
 
+    // function renderImages(count) {
+    //   grid.innerHTML = images
+    //     .slice(0, count)
+    //     .map(
+    //       (src, i) =>
+    //         `<div class="gallery-item" data-index="${i}">
+    //       <img src="${src}" alt="Gallery photo ${i + 1}" loading="lazy">
+    //     </div>`,
+    //     )
+    //     .join("");
+
+    //   $$(".gallery-item", grid).forEach((item) => {
+    //     item.addEventListener("click", () => {
+    //       openModal(images, parseInt(item.dataset.index));
+    //     });
+    //   });
+    // }
+    /////////////이미지우클릭방지 - 갤러리
     function renderImages(count) {
       grid.innerHTML = images
         .slice(0, count)
         .map(
           (src, i) =>
-            `<div class="gallery-item" data-index="${i}">
-          <img src="${src}" alt="Gallery photo ${i + 1}" loading="lazy">
-        </div>`,
+            `<div 
+            class="gallery-item" 
+            data-index="${i}"
+            style="background-image: url('${src}')"
+          ></div>`,
         )
         .join("");
 
@@ -451,6 +471,7 @@
         });
       });
     }
+    ////////////////////////////////
 
     renderImages(Math.min(initialCount, images.length));
 

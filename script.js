@@ -584,18 +584,31 @@
     updateModalImage();
   }
 
+  // function updateModalImage() {
+  //   const img = $(".modal-image");
+  //   const counter = $(".modal-counter");
+  //   if (img) {
+  //     img.src = currentModalImages[currentModalIndex];
+  //     img.alt = `Photo ${currentModalIndex + 1}`;
+  //   }
+  //   if (counter) {
+  //     counter.textContent = `${currentModalIndex + 1} / ${currentModalImages.length}`;
+  //   }
+  // }
+  //우클릭방지버전
   function updateModalImage() {
-    const img = $(".modal-image");
+    const image = $(".modal-image");
     const counter = $(".modal-counter");
-    if (img) {
-      img.src = currentModalImages[currentModalIndex];
-      img.alt = `Photo ${currentModalIndex + 1}`;
+
+    if (image) {
+      image.style.backgroundImage = `url("${currentModalImages[currentModalIndex]}")`;
+      image.setAttribute("aria-label", `Photo ${currentModalIndex + 1}`);
     }
+
     if (counter) {
       counter.textContent = `${currentModalIndex + 1} / ${currentModalImages.length}`;
     }
   }
-
   // ── Location ──
   function buildLocation(c) {
     const venueName = $(".location-venue-name");

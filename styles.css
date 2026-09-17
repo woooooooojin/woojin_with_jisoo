@@ -1251,3 +1251,10 @@ li {
   border-radius: 8px;
   margin-top: 60px;
 }
+
+img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}

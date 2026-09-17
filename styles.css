@@ -483,6 +483,7 @@ li {
   overflow: hidden;
   cursor: pointer;
   position: relative;
+  border-radius: 4px;
 }
 
 .gallery-item:nth-child(3n + 1) {

@@ -317,9 +317,7 @@ li {
   margin-bottom: 20px;
 }
 .calendar_img_wrap {
-  /* width: 100%;
-  height: auto; */
-  margin-bottom: 32px;
+  /* margin-bottom: 32px;
   width: 100%;
   height: auto;
   aspect-ratio: 1 / 1;
@@ -332,9 +330,12 @@ li {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   user-select: none;
-  -webkit-user-drag: none;
+  -webkit-user-drag: none; */
 }
 .calendar_img_wrap > img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 32px;
 }
 
 .countdown-item {
@@ -1276,11 +1277,11 @@ li {
   }
 }
 
-/* .last_img > img {
+.last_img > img {
   border-radius: 8px;
   margin-top: 60px;
-} */
-.last_img {
+}
+/* .last_img {
   width: 100%;
   height: auto;
   aspect-ratio: 4 / 6;
@@ -1290,7 +1291,7 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 img {
   -webkit-touch-callout: none;

@@ -363,6 +363,26 @@
   }
 
   // ── Story Images (rendered after auto-detection) ──
+  // function buildStoryImages(storyImages) {
+  //   const container = $(".story-images");
+  //   if (!container) return;
+
+  //   if (storyImages.length === 0) {
+  //     container.style.display = "none";
+  //     return;
+  //   }
+
+  //   container.innerHTML = storyImages
+  //     .map(
+  //       (src, i) =>
+  //         `<div class="story-image-item">
+  //       <img src="${src}" alt="Our story ${i + 1}" loading="lazy">
+  //     </div>`,
+  //     )
+  //     .join("");
+  // }
+
+  ///수정후
   function buildStoryImages(storyImages) {
     const container = $(".story-images");
     if (!container) return;
@@ -375,12 +395,16 @@
     container.innerHTML = storyImages
       .map(
         (src, i) =>
-          `<div class="story-image-item">
-        <img src="${src}" alt="Our story ${i + 1}" loading="lazy">
-      </div>`,
+          `<div 
+          class="story-image-item"
+          style="background-image: url('${src}')"
+          role="img"
+          aria-label="Our story ${i + 1}"
+        ></div>`,
       )
       .join("");
   }
+  ///////
 
   // ── Gallery (rendered after auto-detection) ──
   let galleryAllImages = [];
@@ -452,7 +476,7 @@
     }
   }
 
-  //
+  //우클릭 방지
   document.addEventListener("contextmenu", function (e) {
     if (e.target.closest("img")) {
       e.preventDefault();

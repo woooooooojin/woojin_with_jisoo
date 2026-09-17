@@ -1258,3 +1258,28 @@ img {
   user-select: none;
   -webkit-user-drag: none;
 }
+/**09/17 img태그에서 bg로 변경 **/
+.gallery-item {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.story-image-item {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
